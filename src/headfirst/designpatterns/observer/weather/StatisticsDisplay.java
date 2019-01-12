@@ -5,9 +5,9 @@ public class StatisticsDisplay implements Observer, DisplayElement {
 	private float minTemp = 200;
 	private float tempSum= 0.0f;
 	private int numReadings;
-	private WeatherData weatherData;
+	private Subject weatherData;
 
-	public StatisticsDisplay(WeatherData weatherData) {
+	public StatisticsDisplay(Subject weatherData) {
 		this.weatherData = weatherData;
 		weatherData.registerObserver(this);
 	}

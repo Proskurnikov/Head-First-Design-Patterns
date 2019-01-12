@@ -3,9 +3,9 @@ package headfirst.designpatterns.observer.weather;
 public class ForecastDisplay implements Observer, DisplayElement {
 	private float currentPressure = 29.92f;  
 	private float lastPressure;
-	private WeatherData weatherData;
+	private Subject weatherData;
 
-	public ForecastDisplay(WeatherData weatherData) {
+	public ForecastDisplay(Subject weatherData) {
 		this.weatherData = weatherData;
 		weatherData.registerObserver(this);
 	}

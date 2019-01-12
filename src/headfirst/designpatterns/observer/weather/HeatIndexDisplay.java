@@ -2,9 +2,9 @@ package headfirst.designpatterns.observer.weather;
 
 public class HeatIndexDisplay implements Observer, DisplayElement {
 	float heatIndex = 0.0f;
-	private WeatherData weatherData;
+	private Subject weatherData;
 
-	public HeatIndexDisplay(WeatherData weatherData) {
+	public HeatIndexDisplay(Subject weatherData) {
 		this.weatherData = weatherData;
 		weatherData.registerObserver(this);
 	}
